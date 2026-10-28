@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer utilities {
+  @keyframes flowDash {
+    0% {
+      stroke-dashoffset: 32;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes flowDashReverse {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 32;
+    }
+  }
+
+  @keyframes pulseAlarmSlow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes waterWave {
+    0% {
+      d: path("M 0 5 Q 25 0 50 5 T 100 5 T 150 5 T 200 5 T 250 5 L 250 100 L 0 100 Z");
+    }
+    50% {
+      d: path("M 0 5 Q 25 10 50 5 T 100 5 T 150 5 T 200 5 T 250 5 L 250 100 L 0 100 Z");
+    }
+    100% {
+      d: path("M 0 5 Q 25 0 50 5 T 100 5 T 150 5 T 200 5 T 250 5 L 250 100 L 0 100 Z");
+    }
+  }
+
+  .animate-flow {
+    animation: flowDash 0.8s linear infinite;
+  }
+
+  .animate-flow-fast {
+    animation: flowDash 0.4s linear infinite;
+  }
+
+  .animate-flow-reverse {
+    animation: flowDashReverse 0.8s linear infinite;
+  }
+
+  .animate-pulse-alarm {
+    animation: pulseAlarmSlow 1.5s ease-in-out infinite;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Simulator Gospodărie Apă Potabilă",
+  "description": "Simulator hidraulic interactiv și schemă tehnologică SVG pentru o gospodărie de apă potabilă cu două rezervoare și 6 vane.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
